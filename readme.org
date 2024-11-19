@@ -1,0 +1,3 @@
+Dette repo indeholder en præsentation om funktioner beregnet til matematik A og B på stx eller htx.
+
+Selve præsentationen kan findes her: https://jacobdebel.github.io/matematik_funktioner.
