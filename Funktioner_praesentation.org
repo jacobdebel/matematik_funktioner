@@ -1,0 +1,328 @@
+#+title: Funktioner
+#+subtitle: Matematik B & A
+#+author: Jacob Debel
+#+date: 
+# Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+reveal_theme: night
+#+reveal_title_slide: <h2>%t</h2><h3>%s</h3><h4>%a</h4><h4>%d</h4>
+#+reveal_title_slide_background:
+#+reveal_default_slide_background:
+#+reveal_extra_options: slideNumber:"c",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true
+# #+reveal_extra_attr: style="color:red"
+#+options: toc:nil num:nil tags:nil timestamp:nil ^:{}
+
+* Funktioner generelt
+
+** Sammenhæng mellem variable
+#+reveal_html: <div style="font-size: 60%;">
+I kender det allerede:
+#+attr_reveal: :frag (appear)
+- Regningen på energidrik afhænger af antallet af energidrik, der købes (og mærket selvfølgelig).
+- Renteindtægterne i banken afhænger af pengene på bankbogen.
+- Tidevand afhænger af tidspunktet på døgnet.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Fælles er:
+#+attr_reveal: :frag (appear)
+- at en størrelse afhænger af en anden.
+- men at den anden størrelse ikke afhænger af den første.
+
+#+attr_reveal: :frag (appear)
+Eksempel
+#+attr_reveal: :frag (appear)
+- Der er ikke både flod og ebbe (høj- og lavvande) på samme tid.
+- Vi betaler ikke to forskellige beløb for det samme antal mælk (af samme mærke og i samme butik).
+
+** To variabeltyper
+- Den *uafhængige* variabel
+  - Den I før har kaldt x.
+  - Værdierne kan vælges "frit".
+- Den *afhængige* variabel
+  - Den I før har kaldt y og nu kommer til at kalde $f(x)$.
+  - Værdien /afhænger/ af, hvad den uafhængige værdi.
+
+** Parsammenligning
+*Find selv på eksempler, hvor en størrelse afhænger af en anden.*
+- Først i makkerpar.
+- Del jeres eksempler i makkerskabsgruppen.
+
+** Funktionsbegrebet
+#+reveal_html: <div style="font-size: 60%;">
+I matematik er en /funktion/ en matematisk sammenhæng mellem to størrelser.
+
+#+begin_quote
+Definition 1
+
+En funktion er en sammenhæng mellem to størrelser $x$ og $y$, som opfylder følgende betingelse:
+
+"Til enhver værdi af $x$ svarer præcis en værdi af $y$."
+
+Man siger i dette tilfælde, at $y$ er en funktion af $x$. Kaldes funktionen for $f$, skriver man $y=f(x)$.
+#+end_quote
+#+reveal_html: </div>
+
+** En lille (sproglig) opgave
+[[./img/funktioner_generelt_opgave.png]]
+
+** Repræsentationsformer
+#+reveal_html: <div style="font-size: 60%;">
+Typisk beskrives en matematisk funktion ved en *forskrift* og/eller en *graf*.
+
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+Forskrifter:
+\begin{align*}
+f(x)&= \frac{1}{2}x -3 \\
+g(x)&= 2 e^{-\frac{1}{2}x} \\
+h(x) &= \sqrt{x} \\
+i(x) &= - \frac{1}{x}+3
+\end{align*}
+
+Hvad skal det sige inde i hovedet?
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+De tilhørende grafer:
+
+#+attr_html: :width 600px
+[[file:img/2022-01-23_20-59-18_screenshot.png]]
+#+reveal_html: </div>
+
+** Funktioner og grafer
+#+reveal_html: <div style="font-size: 60%;">
+Diskutér i makkerpar.
+
+#+attr_html: :height 500px
+[[./img/2022-01-23_21-03-40_screenshot.png]]
+#+reveal_html: </div>
+
+** Lidt regning
+
+#+attr_html: :height 500px
+[[./img/2022-01-23_21-10-17_screenshot.png]]
+
+** Dm og Vm
+#+reveal_html: <div style="font-size: 60%;">
+Nej, der er hverken tale om Danmarks- eller verdensmesterskabet her.
+
+#+begin_quote
+Definition 2
+
+Den mængde af tal, inden for hvilken den uafhængige variabel $x$ kan variere, kaldes funktionens /definitionsmængde/ og betegnes Dm($f$).
+
+Den mængde af tal, der udgøres af samtlige funktionsværdier, kaldes funktionens /værdimængde/ og betegnes med Vm($f$).
+#+end_quote
+#+reveal_html: </div>
+
+** Hvad siger I til dette?
+#+reveal_html: <div style="font-size: 60%;">
+- Angiv, så godt I kan, Dm og Vm for hver af funktionerne, som I har set tidligere.
+- Det er helt fint at spørge eller komme med kvalificerede svar. Det er jo trods alt første gang, at I arbejder med dette.
+  
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+Forskrifter:
+\begin{align*}
+f(x)&= \frac{1}{2}x -3 \\
+g(x)&= 2 e^{-\frac{1}{2}x} \\
+h(x) &= \sqrt{x} \\
+i(x) &= - \frac{1}{x}+3
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_html: :width 600px
+[[file:img/2022-01-23_20-59-18_screenshot.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Hvad fik I?
+#+reveal_html: <div style="font-size: 50%;">
+  
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_reveal: :frag (appear) :frag_idx 1
+Helt sikkert dette! :)
+#+attr_reveal: :frag (appear) :frag_idx 1
+\begin{align*}
+Dm(f) &= \left\{ x \in \mathbb{R} \right\} \\
+Vm(f) &= \left\{ f \in \mathbb{R} \right\} \\
+\\
+Dm(g) &= \left\{ x \in \mathbb{R} \right\} \\
+Vm(g) &= \left\{ g \in \mathbb{R} | g > 0 \right\} = \left\{ g \in \mathbb{R}_+^{*} \right\}\\
+\\
+Dm(h) &= \left\{ x \in \mathbb{R} | x \geq 0 \right\} = \left\{ x \in \mathbb{R}_+ \right\}\\
+Vm(h) &= \left\{ h \in \mathbb{R} | h \geq 0 \right\} = \left\{ h \in \mathbb{R}_+ \right\}\\
+\\
+Dm(i) &= \left\{ x \in \mathbb{R} | x \neq 0 \right\} = \left\{ x \in \mathbb{R}\setminus \{0\} \right\}\\
+Vm(i) &= \left\{ i \in \mathbb{R} | i \neq 3 \right\} = \left\{ i \in \mathbb{R}\setminus \{3\} \right\}
+\end{align*}
+
+#+attr_reveal: :frag (appear) :frag_idx 2
+Gad vide, hvad det siger inde i hovedet? :)
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_html: :width 600px
+[[file:img/2022-01-23_20-59-18_screenshot.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** (Lidt) nemmere
+
+#+reveal_html: <div style="font-size: 40%;">
+\begin{align*}
+Dm(f) &= \left\{ x \in \mathbb{R}\right\} & \phantom{a}&\text{eller} & Dm(f) &= ]-\infty \,,\, \infty[  \\
+Vm(f) &= \left\{ f \in \mathbb{R} \right\} & \phantom{a}&\text{eller} & Vm(f) &= ]- \infty \,,\, \infty [\\
+\\
+Dm(g) &= \left\{ x \in \mathbb{R} \right\} & \phantom{a} &\text{eller} & Dm(g) &= ]-\infty \,,\, \infty[\\
+Vm(g) &= \left\{ g \in \mathbb{R} | g > 0 \right\} = \left\{ g \in \mathbb{R}_+^{*} \right\} & \phantom{a} &\text{eller} & Vm(g) &= ]0 \,,\, \infty[\\
+\\
+Dm(h) &= \left\{ x \in \mathbb{R} | x \geq 0 \right\} = \left\{ x \in \mathbb{R}_+ \right\} & \phantom{a} &\text{eller} & Dm(h) &= [0 \,,\, \infty[ \\
+Vm(h) &= \left\{ h \in \mathbb{R} | h \geq 0 \right\} = \left\{ h \in \mathbb{R}_+ \right\}& \phantom{a} &\text{eller} & Vm(h) &= [0 \,,\, \infty[ \\
+\\
+Dm(i) &= \left\{ x \in \mathbb{R} | x \neq 0 \right\} = \left\{ x \in \mathbb{R}\setminus \{0\} \right\}& \phantom{a} &\text{eller} & Dm(i) &= [-\infty \,,\, 0[\,\cup\, ]0 \,,\, \infty[ \\
+Vm(i) &= \left\{ i \in \mathbb{R} | i \neq 3 \right\} = \left\{ i \in \mathbb{R}\setminus \{3\} \right\}& \phantom{a} &\text{eller} & Dm(i) &= [-\infty \,,\, 3[\,\cup\, ]3 \,,\, \infty[ 
+\end{align*}
+
+#+attr_html: :height 250px
+[[file:img/2022-01-23_20-59-18_screenshot.png]]
+#+reveal_html: </div>
+
+** Dm og Vm - opgaver
+
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+- Note 8.5: Kan I se, at der er forskel på "bollerne" i enderne af graferne? Der er en lille forskel i deres betydning.
+- Ekstra udfordring til opgave 8.6: Bestem Dm og Vm /uden/ at tegne graferne først.
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+DOWNLOADED: screenshot @ 2022-01-23 21:52:19
+#+attr_html: :height 550px
+[[file:img/2022-01-23_21-52-19_screenshot.png]]
+#+reveal_html: </div>
+
+** Flere opgaver
+#+attr_html: :height 250px
+[[./img/opgave_115.png]]
+
+#+attr_html: :height 250px
+[[./img/opgave_116.png]]
+** Monotoni 
+
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+#+begin_quote
+Definition 3
+
+En funktion $f$ kaldes /voksende/, hvis der for to vilkårlige tal $x_1$ og $x_2$ i definitionsmængden gælder, at
+
+$$\text{hvis } x_1 < x_2, \text{ så er } f(x_1) < f(x_2)\,.$$
+
+En funktion $f$ kaldes /aftagende/, hvis der for to vilkårlige tal $x_1$ og $x_2$ i definitionsmængden gælder, at
+
+$$\text{hvis } x_1 < x_2, \text{ så er } f(x_1) > f(x_2)\,.$$
+
+En funktion, der enten er voksende eller aftagende, kaldes under ét /monoton/.
+#+end_quote
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+
+#+begin_quote
+Definition 4
+
+Et monotoniinterval for en funktion $f$ er et størst muligt interval i definitionsmængden for $f$, hvor $f$ er mononton.
+#+end_quote
+- Når noget er monotont, er det ensformigt.
+- En funktion er monoton, når den er voksende eller aftagende i hele sin Dm.
+- En funktion, som hverken vokser eller aftager, er konstant.
+- En funktion kan skifte mellem at være voksende og aftagende. Man fastlægger dens /monotoniforhold/.
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Lidt eksempler
+
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto auto;">
+#+reveal_html: <div>
+[[./img/voksende_funktion.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/aftagende_funktion.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/vekslende_funktion.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Maks, min - ekstremum
+#+reveal_html: <div style="font-size: 45%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+#+attr_html: :width 200px
+[[./img/ekstrema.png]]
+
+#+begin_quote
+Definition 5
+
+- Funktionen $f$ har lokalt maksimum i punktet $M(x_0, f(x_0))$, hvis $f(x) < f(x_0)$ for alle $x$ i nærheden af $x_0$.
+- Funktionen $f$ har lokalt minimum i punktet $m(x_1, f(x_1))$, hvis $f(x) > f(x_1)$ for alle $x$ i nærheden af $x_1$.
+#+end_quote
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+- Et ekstremumspunkt er enten er minimumspunkt eller et maksimumspunkt.
+- Hedder også en ekstremum i ental og ekstrama i flertal.
+- Der er både /globale/ og /lokale/ ekstremumspunkter.
+
+#+begin_quote
+Definition 6
+
+- Funktionen $f$ har globalt maksimum i punktet $M(x_0,f(x_0))$, når $f(x_0)$ er den største værdi, funktionen antager.
+- Funktionen $f$ har globalt minimum i punktet $m(x_1,f(x_1))$, når $f(x_1)$ er den mindste værdi, funktionen antager.
+#+end_quote
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Eksempel
+
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+- Lokalt og globalt minimum: $(3\,,\, -13.5)$
+- Lokalt maksimum: $(-2\,,\,7.33)$
+- Globalt maksimum: $(6\,,\,18)$
+- Funktionens monotoniforhold:
+  - $f$ er voksende i intervallerne $-3 \leq x < -2$ og $3< x \leq 6$
+  - $f$ er aftagende  i intervallet $-2 < x < 3$
+- $Vm(f) = \left\{ f \in \mathbb{R} | -13.5 \leq f \leq 18 \right\}$
+
+
+#+attr_reveal: :frag (appear)
+#+begin_quote
+Angiv lige det hele med intervalklammer.
+#+end_quote
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+\begin{align*}
+f(x)&= \frac{1}{3} x^3-\frac{1}{2}x^2-6x \\
+Dm(f) &= \left\{ x \in \mathbb{R} | -3 \leq x \leq 6 \right\}
+\end{align*}
+#+attr_html: :width 500px
+[[./img/ekstrema_eksempel.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Opgaver
+
+#+attr_html: :height 250px
+[[./img/opgave_133.png]]
+
+#+attr_html: :height 250px
+[[./img/opgave_135.png]]

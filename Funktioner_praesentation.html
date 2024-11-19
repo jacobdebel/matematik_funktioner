@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<title>Funktioner</title>
+<meta name="author" content="Jacob Debel"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/night.css" id="theme"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h2>Funktioner</h2><h3>Matematik B &amp; A</h3><h4>Jacob Debel</h4><h4></h4>
+</section>
+
+<section>
+<section id="slide-org2746cf8" data-background="">
+<h2 id="org2746cf8">Funktioner generelt</h2>
+<div class="outline-text-2" id="text-org2746cf8">
+</div>
+</section>
+<section id="slide-org1c5fc06" data-background="">
+<h3 id="org1c5fc06">Sammenhæng mellem variable</h3>
+<div style="font-size: 60%;">
+<p>
+I kender det allerede:
+</p>
+<ul>
+<li class="fragment appear">Regningen på energidrik afhænger af antallet af energidrik, der købes (og mærket selvfølgelig).</li>
+<li class="fragment appear">Renteindtægterne i banken afhænger af pengene på bankbogen.</li>
+<li class="fragment appear">Tidevand afhænger af tidspunktet på døgnet.</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Fælles er:
+</p>
+<ul>
+<li class="fragment appear">at en størrelse afhænger af en anden.</li>
+<li class="fragment appear">men at den anden størrelse ikke afhænger af den første.</li>
+
+</ul>
+
+<p class="fragment (appear)">
+Eksempel
+</p>
+<ul>
+<li class="fragment appear">Der er ikke både flod og ebbe (høj- og lavvande) på samme tid.</li>
+<li class="fragment appear">Vi betaler ikke to forskellige beløb for det samme antal mælk (af samme mærke og i samme butik).</li>
+
+</ul>
+
+</section>
+<section id="slide-org09f231a" data-background="">
+<h3 id="org09f231a">To variabeltyper</h3>
+<ul>
+<li>Den <b>uafhængige</b> variabel
+<ul>
+<li>Den I før har kaldt x.</li>
+<li>Værdierne kan vælges "frit".</li>
+
+</ul></li>
+<li>Den <b>afhængige</b> variabel
+<ul>
+<li>Den I før har kaldt y og nu kommer til at kalde \(f(x)\).</li>
+<li>Værdien <i>afhænger</i> af, hvad den uafhængige værdi.</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org2f953f7" data-background="">
+<h3 id="org2f953f7">Parsammenligning</h3>
+<p>
+<b>Find selv på eksempler, hvor en størrelse afhænger af en anden.</b>
+</p>
+<ul>
+<li>Først i makkerpar.</li>
+<li>Del jeres eksempler i makkerskabsgruppen.</li>
+
+</ul>
+
+</section>
+<section id="slide-org88351b0" data-background="">
+<h3 id="org88351b0">Funktionsbegrebet</h3>
+<div style="font-size: 60%;">
+<p>
+I matematik er en <i>funktion</i> en matematisk sammenhæng mellem to størrelser.
+</p>
+
+<blockquote>
+<p>
+Definition 1
+</p>
+
+<p>
+En funktion er en sammenhæng mellem to størrelser \(x\) og \(y\), som opfylder følgende betingelse:
+</p>
+
+<p>
+"Til enhver værdi af \(x\) svarer præcis en værdi af \(y\)."
+</p>
+
+<p>
+Man siger i dette tilfælde, at \(y\) er en funktion af \(x\). Kaldes funktionen for \(f\), skriver man \(y=f(x)\).
+</p>
+</blockquote>
+</div>
+
+</section>
+<section id="slide-org3a0362b" data-background="">
+<h3 id="org3a0362b">En lille (sproglig) opgave</h3>
+
+<div id="org5786585" class="figure">
+<p><img src="./img/funktioner_generelt_opgave.png" alt="funktioner_generelt_opgave.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-org913d62a" data-background="">
+<h3 id="org913d62a">Repræsentationsformer</h3>
+<div style="font-size: 60%;">
+<p>
+Typisk beskrives en matematisk funktion ved en <b>forskrift</b> og/eller en <b>graf</b>.
+</p>
+
+<div class="column" style="float:left; width: 50%">
+<p>
+Forskrifter:
+</p>
+<div>
+\begin{align*}
+f(x)&= \frac{1}{2}x -3 \\
+g(x)&= 2 e^{-\frac{1}{2}x} \\
+h(x) &= \sqrt{x} \\
+i(x) &= - \frac{1}{x}+3
+\end{align*}
+
+</div>
+
+<p>
+Hvad skal det sige inde i hovedet?
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+De tilhørende grafer:
+</p>
+
+
+<div id="org07df979" class="figure">
+<p><img src="img/2022-01-23_20-59-18_screenshot.png" alt="2022-01-23_20-59-18_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org5941a0f" data-background="">
+<h3 id="org5941a0f">Funktioner og grafer</h3>
+<div style="font-size: 60%;">
+<p>
+Diskutér i makkerpar.
+</p>
+
+
+<div id="orgc541f00" class="figure">
+<p><img src="./img/2022-01-23_21-03-40_screenshot.png" alt="2022-01-23_21-03-40_screenshot.png" height="500px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org38343b6" data-background="">
+<h3 id="org38343b6">Lidt regning</h3>
+
+<div id="orgd3fe434" class="figure">
+<p><img src="./img/2022-01-23_21-10-17_screenshot.png" alt="2022-01-23_21-10-17_screenshot.png" height="500px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org47f216d" data-background="">
+<h3 id="org47f216d">Dm og Vm</h3>
+<div style="font-size: 60%;">
+<p>
+Nej, der er hverken tale om Danmarks- eller verdensmesterskabet her.
+</p>
+
+<blockquote>
+<p>
+Definition 2
+</p>
+
+<p>
+Den mængde af tal, inden for hvilken den uafhængige variabel \(x\) kan variere, kaldes funktionens <i>definitionsmængde</i> og betegnes Dm(\(f\)).
+</p>
+
+<p>
+Den mængde af tal, der udgøres af samtlige funktionsværdier, kaldes funktionens <i>værdimængde</i> og betegnes med Vm(\(f\)).
+</p>
+</blockquote>
+</div>
+
+</section>
+<section id="slide-org8cab4c9" data-background="">
+<h3 id="org8cab4c9">Hvad siger I til dette?</h3>
+<div style="font-size: 60%;">
+<ul>
+<li>Angiv, så godt I kan, Dm og Vm for hver af funktionerne, som I har set tidligere.</li>
+<li>Det er helt fint at spørge eller komme med kvalificerede svar. Det er jo trods alt første gang, at I arbejder med dette.</li>
+
+</ul>
+
+<div class="column" style="float:left; width: 50%">
+<p>
+Forskrifter:
+</p>
+<div>
+\begin{align*}
+f(x)&= \frac{1}{2}x -3 \\
+g(x)&= 2 e^{-\frac{1}{2}x} \\
+h(x) &= \sqrt{x} \\
+i(x) &= - \frac{1}{x}+3
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgdd0ddda" class="figure">
+<p><img src="img/2022-01-23_20-59-18_screenshot.png" alt="2022-01-23_20-59-18_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+</div>
+
+</section>
+<section id="slide-org1c408c8" data-background="">
+<h3 id="org1c408c8">Hvad fik I?</h3>
+<div style="font-size: 50%;">
+
+<div class="column" style="float:left; width: 50%">
+<p data-fragment-index="1" class="fragment (appear)">
+Helt sikkert dette! :)
+</p>
+<div data-fragment-index="1" class="fragment (appear)">
+\begin{align*}
+Dm(f) &= \left\{ x \in \mathbb{R} \right\} \\
+Vm(f) &= \left\{ f \in \mathbb{R} \right\} \\
+\\
+Dm(g) &= \left\{ x \in \mathbb{R} \right\} \\
+Vm(g) &= \left\{ g \in \mathbb{R} | g > 0 \right\} = \left\{ g \in \mathbb{R}_+^{*} \right\}\\
+\\
+Dm(h) &= \left\{ x \in \mathbb{R} | x \geq 0 \right\} = \left\{ x \in \mathbb{R}_+ \right\}\\
+Vm(h) &= \left\{ h \in \mathbb{R} | h \geq 0 \right\} = \left\{ h \in \mathbb{R}_+ \right\}\\
+\\
+Dm(i) &= \left\{ x \in \mathbb{R} | x \neq 0 \right\} = \left\{ x \in \mathbb{R}\setminus \{0\} \right\}\\
+Vm(i) &= \left\{ i \in \mathbb{R} | i \neq 3 \right\} = \left\{ i \in \mathbb{R}\setminus \{3\} \right\}
+\end{align*}
+
+</div>
+
+<p data-fragment-index="2" class="fragment (appear)">
+Gad vide, hvad det siger inde i hovedet? :)
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org9a88e7b" class="figure">
+<p><img src="img/2022-01-23_20-59-18_screenshot.png" alt="2022-01-23_20-59-18_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+</div>
+
+</section>
+<section id="slide-org28c291e" data-background="">
+<h3 id="org28c291e">(Lidt) nemmere</h3>
+<div style="font-size: 40%;">
+<div>
+\begin{align*}
+Dm(f) &= \left\{ x \in \mathbb{R}\right\} & \phantom{a}&\text{eller} & Dm(f) &= ]-\infty \,,\, \infty[  \\
+Vm(f) &= \left\{ f \in \mathbb{R} \right\} & \phantom{a}&\text{eller} & Vm(f) &= ]- \infty \,,\, \infty [\\
+\\
+Dm(g) &= \left\{ x \in \mathbb{R} \right\} & \phantom{a} &\text{eller} & Dm(g) &= ]-\infty \,,\, \infty[\\
+Vm(g) &= \left\{ g \in \mathbb{R} | g > 0 \right\} = \left\{ g \in \mathbb{R}_+^{*} \right\} & \phantom{a} &\text{eller} & Vm(g) &= ]0 \,,\, \infty[\\
+\\
+Dm(h) &= \left\{ x \in \mathbb{R} | x \geq 0 \right\} = \left\{ x \in \mathbb{R}_+ \right\} & \phantom{a} &\text{eller} & Dm(h) &= [0 \,,\, \infty[ \\
+Vm(h) &= \left\{ h \in \mathbb{R} | h \geq 0 \right\} = \left\{ h \in \mathbb{R}_+ \right\}& \phantom{a} &\text{eller} & Vm(h) &= [0 \,,\, \infty[ \\
+\\
+Dm(i) &= \left\{ x \in \mathbb{R} | x \neq 0 \right\} = \left\{ x \in \mathbb{R}\setminus \{0\} \right\}& \phantom{a} &\text{eller} & Dm(i) &= [-\infty \,,\, 0[\,\cup\, ]0 \,,\, \infty[ \\
+Vm(i) &= \left\{ i \in \mathbb{R} | i \neq 3 \right\} = \left\{ i \in \mathbb{R}\setminus \{3\} \right\}& \phantom{a} &\text{eller} & Dm(i) &= [-\infty \,,\, 3[\,\cup\, ]3 \,,\, \infty[ 
+\end{align*}
+
+</div>
+
+
+<div id="orgcda789f" class="figure">
+<p><img src="img/2022-01-23_20-59-18_screenshot.png" alt="2022-01-23_20-59-18_screenshot.png" height="250px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org6ab68fe" data-background="">
+<h3 id="org6ab68fe">Dm og Vm - opgaver</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Note 8.5: Kan I se, at der er forskel på "bollerne" i enderne af graferne? Der er en lille forskel i deres betydning.</li>
+<li>Ekstra udfordring til opgave 8.6: Bestem Dm og Vm <i>uden</i> at tegne graferne først.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgd3521a3" class="figure">
+<p><img src="img/2022-01-23_21-52-19_screenshot.png" alt="2022-01-23_21-52-19_screenshot.png" height="550px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orga296b9f" data-background="">
+<h3 id="orga296b9f">Flere opgaver</h3>
+
+<div id="orgb1f12a9" class="figure">
+<p><img src="./img/opgave_115.png" alt="opgave_115.png" height="250px" />
+</p>
+</div>
+
+
+<div id="org46196a4" class="figure">
+<p><img src="./img/opgave_116.png" alt="opgave_116.png" height="250px" />
+</p>
+</div>
+</section>
+<section id="slide-org413554f" data-background="">
+<h3 id="org413554f">Monotoni</h3>
+<div style="font-size: 50%;">
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+<blockquote>
+<p>
+Definition 3
+</p>
+
+<p>
+En funktion \(f\) kaldes <i>voksende</i>, hvis der for to vilkårlige tal \(x_1\) og \(x_2\) i definitionsmængden gælder, at
+</p>
+
+<p>
+\[\text{hvis } x_1 < x_2, \text{ så er } f(x_1) < f(x_2)\,.\]
+</p>
+
+<p>
+En funktion \(f\) kaldes <i>aftagende</i>, hvis der for to vilkårlige tal \(x_1\) og \(x_2\) i definitionsmængden gælder, at
+</p>
+
+<p>
+\[\text{hvis } x_1 < x_2, \text{ så er } f(x_1) > f(x_2)\,.\]
+</p>
+
+<p>
+En funktion, der enten er voksende eller aftagende, kaldes under ét <i>monoton</i>.
+</p>
+</blockquote>
+</div>
+
+<div>
+
+<blockquote>
+<p>
+Definition 4
+</p>
+
+<p>
+Et monotoniinterval for en funktion \(f\) er et størst muligt interval i definitionsmængden for \(f\), hvor \(f\) er mononton.
+</p>
+</blockquote>
+<ul>
+<li>Når noget er monotont, er det ensformigt.</li>
+<li>En funktion er monoton, når den er voksende eller aftagende i hele sin Dm.</li>
+<li>En funktion, som hverken vokser eller aftager, er konstant.</li>
+<li>En funktion kan skifte mellem at være voksende og aftagende. Man fastlægger dens <i>monotoniforhold</i>.</li>
+
+</ul>
+</div>
+</div>
+</div>
+
+</section>
+<section id="slide-orgdeae792" data-background="">
+<h3 id="orgdeae792">Lidt eksempler</h3>
+<div style="display: grid; grid-template-columns: auto auto auto;">
+<div>
+
+<div id="orge772e33" class="figure">
+<p><img src="./img/voksende_funktion.png" alt="voksende_funktion.png" />
+</p>
+</div>
+</div>
+
+<div>
+
+<div id="orge5a30f5" class="figure">
+<p><img src="./img/aftagende_funktion.png" alt="aftagende_funktion.png" />
+</p>
+</div>
+</div>
+
+<div>
+
+<div id="org2ef9168" class="figure">
+<p><img src="./img/vekslende_funktion.png" alt="vekslende_funktion.png" />
+</p>
+</div>
+</div>
+</div>
+
+</section>
+<section id="slide-orga9902ab" data-background="">
+<h3 id="orga9902ab">Maks, min - ekstremum</h3>
+<div style="font-size: 45%;">
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+
+<div id="org83e5283" class="figure">
+<p><img src="./img/ekstrema.png" alt="ekstrema.png" width="200px" />
+</p>
+</div>
+
+<blockquote>
+<p>
+Definition 5
+</p>
+
+<ul>
+<li>Funktionen \(f\) har lokalt maksimum i punktet \(M(x_0, f(x_0))\), hvis \(f(x) < f(x_0)\) for alle \(x\) i nærheden af \(x_0\).</li>
+<li>Funktionen \(f\) har lokalt minimum i punktet \(m(x_1, f(x_1))\), hvis \(f(x) > f(x_1)\) for alle \(x\) i nærheden af \(x_1\).</li>
+
+</ul>
+</blockquote>
+</div>
+
+<div>
+<ul>
+<li>Et ekstremumspunkt er enten er minimumspunkt eller et maksimumspunkt.</li>
+<li>Hedder også en ekstremum i ental og ekstrama i flertal.</li>
+<li>Der er både <i>globale</i> og <i>lokale</i> ekstremumspunkter.</li>
+
+</ul>
+
+<blockquote>
+<p>
+Definition 6
+</p>
+
+<ul>
+<li>Funktionen \(f\) har globalt maksimum i punktet \(M(x_0,f(x_0))\), når \(f(x_0)\) er den største værdi, funktionen antager.</li>
+<li>Funktionen \(f\) har globalt minimum i punktet \(m(x_1,f(x_1))\), når \(f(x_1)\) er den mindste værdi, funktionen antager.</li>
+
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+
+</section>
+<section id="slide-org7ae1a07" data-background="">
+<h3 id="org7ae1a07">Eksempel</h3>
+<div style="font-size: 60%;">
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+<ul>
+<li>Lokalt og globalt minimum: \((3\,,\, -13.5)\)</li>
+<li>Lokalt maksimum: \((-2\,,\,7.33)\)</li>
+<li>Globalt maksimum: \((6\,,\,18)\)</li>
+<li>Funktionens monotoniforhold:
+<ul>
+<li>\(f\) er voksende i intervallerne \(-3 \leq x < -2\) og \(3< x \leq 6\)</li>
+<li>\(f\) er aftagende  i intervallet \(-2 < x < 3\)</li>
+
+</ul></li>
+<li>\(Vm(f) = \left\{ f \in \mathbb{R} | -13.5 \leq f \leq 18 \right\}\)</li>
+
+</ul>
+
+
+<blockquote class="fragment (appear)">
+<p>
+Angiv lige det hele med intervalklammer.
+</p>
+</blockquote>
+</div>
+
+<div>
+<div>
+\begin{align*}
+f(x)&= \frac{1}{3} x^3-\frac{1}{2}x^2-6x \\
+Dm(f) &= \left\{ x \in \mathbb{R} | -3 \leq x \leq 6 \right\}
+\end{align*}
+
+</div>
+
+<div id="orgdbb1f07" class="figure">
+<p><img src="./img/ekstrema_eksempel.png" alt="ekstrema_eksempel.png" width="500px" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+<section id="slide-org7f2079f" data-background="">
+<h3 id="org7f2079f">Opgaver</h3>
+
+<div id="orgbaae69a" class="figure">
+<p><img src="./img/opgave_133.png" alt="opgave_133.png" height="250px" />
+</p>
+</div>
+
+
+<div id="org93a09fd" class="figure">
+<p><img src="./img/opgave_135.png" alt="opgave_135.png" height="250px" />
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/search/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: false,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'slide',
+transitionSpeed: 'default',
+slideNumber:"c",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true,
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>
