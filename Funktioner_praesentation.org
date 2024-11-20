@@ -179,8 +179,8 @@ Vm(g) &= \left\{ g \in \mathbb{R} | g > 0 \right\} = \left\{ g \in \mathbb{R}_+^
 Dm(h) &= \left\{ x \in \mathbb{R} | x \geq 0 \right\} = \left\{ x \in \mathbb{R}_+ \right\} & \phantom{a} &\text{eller} & Dm(h) &= [0 \,,\, \infty[ \\
 Vm(h) &= \left\{ h \in \mathbb{R} | h \geq 0 \right\} = \left\{ h \in \mathbb{R}_+ \right\}& \phantom{a} &\text{eller} & Vm(h) &= [0 \,,\, \infty[ \\
 \\
-Dm(i) &= \left\{ x \in \mathbb{R} | x \neq 0 \right\} = \left\{ x \in \mathbb{R}\setminus \{0\} \right\}& \phantom{a} &\text{eller} & Dm(i) &= [-\infty \,,\, 0[\,\cup\, ]0 \,,\, \infty[ \\
-Vm(i) &= \left\{ i \in \mathbb{R} | i \neq 3 \right\} = \left\{ i \in \mathbb{R}\setminus \{3\} \right\}& \phantom{a} &\text{eller} & Dm(i) &= [-\infty \,,\, 3[\,\cup\, ]3 \,,\, \infty[ 
+Dm(i) &= \left\{ x \in \mathbb{R} | x \neq 0 \right\} = \left\{ x \in \mathbb{R}\setminus \{0\} \right\}& \phantom{a} &\text{eller} & Dm(i) &= ]-\infty \,,\, 0[\,\cup\, ]0 \,,\, \infty[ \\
+Vm(i) &= \left\{ i \in \mathbb{R} | i \neq 3 \right\} = \left\{ i \in \mathbb{R}\setminus \{3\} \right\}& \phantom{a} &\text{eller} & Vm(i) &= ]-\infty \,,\, 3[\,\cup\, ]3 \,,\, \infty[ 
 \end{align*}
 
 #+attr_html: :height 250px
@@ -275,7 +275,7 @@ Definition 5
 
 #+reveal_html: <div>
 - Et ekstremumspunkt er enten er minimumspunkt eller et maksimumspunkt.
-- Hedder også en ekstremum i ental og ekstrama i flertal.
+- Hedder også et ekstremum i ental og ekstrama i flertal.
 - Der er både /globale/ og /lokale/ ekstremumspunkter.
 
 #+begin_quote
@@ -326,3 +326,38 @@ Dm(f) &= \left\{ x \in \mathbb{R} | -3 \leq x \leq 6 \right\}
 
 #+attr_html: :height 250px
 [[./img/opgave_135.png]]
+
+* Lidt elementære funktioner
+
+** Reciprokfunktionen og hyperbler
+*** Reciprok
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% auto;">
+#+reveal_html: <div>
+#+reveal_html: <div style="font-size: 50%;">
+- Hvis produktet af to tal er 1, er de to tal /reciprokke/.
+- Den reciprokke værdi af et tal er 1 delt med tallet.
+- Grafen kaldes en /ligesidet hyperbel/.
+
+$$f(x) = \frac{1}{x} \text{ for } x \neq 0\,. \quad (Reciprokfunktionen)$$
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/reciprokfunktionen.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+*** Omvendtproportionalitet
+
+
+** Kvadrat- og kvadratrodsfunktionen
+
+* Regning med funktioner
+* Inverse funktioner
+* Rødder og potenser
+
+#+reveal_html: <div style="font-size: 150%;">
+Et lille intermezzo.
+#+reveal_html: </div>
+
