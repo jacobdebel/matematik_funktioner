@@ -348,13 +348,307 @@ $$f(x) = \frac{1}{x} \text{ for } x \neq 0\,. \quad (Reciprokfunktionen)$$
 #+reveal_html: </div>
 #+reveal_html: </div>
 
-*** Omvendtproportionalitet
+*** Omvendt proportionalitet
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+#+begin_quote
+Definition 7
+
+To størrelser $x$ og $y$ kaldes /omvendt proportionale/, hvis deres produkt er konstant:
+
+$$x y = k\,.$$
+
+Skrives $y$ som en funktion af $x$, haves regneforskriften
+
+$$y=f(x) = \frac{k}{x}\,.$$
+
+Grafen for $f$ kaldes en /hyperbel/.
+#+end_quote
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Eksempel*
+
+- Fra fysik kendes *bølgeligningen*. Særligt for lys gælder at
+
+$$c = \lambda \cdot f\,,$$
+
+- Bølgelængden $\lambda$  og frekvensen $f$ er omvendt proportionale, da lysets hastighed i vakuum er en konstant.
+- Hvis frekvensen bliver større, bliver bølgelængden kortere.
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
 
 
-** Kvadrat- og kvadratrodsfunktionen
+*** Forskudt hyperbel
+#+begin_export html
+<iframe scrolling="no" title="forskudt_hyperbel" src="https://www.geogebra.org/material/iframe/id/qqydpcya/width/600/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/true/ld/true/sdz/true/ctl/false" width="800px" height="500px" loading="lazy" style="border:0px;"> </iframe>
+#+end_export
+
+*** "Simple" opgaver
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+#+attr_html: :width 85%
+[[./img/hyperbelopgave_1.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+#+attr_html: :width 85%
+[[./img/hyperbelopgave_2.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** $x^2$ og $\sqrt{x}$
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+Et billede siger mere end 1000 ord.
+#+end_quote
+
+[[./img/kvadrat_og_rod_funktion.png]]
+#+reveal_html: </div>
+
+*** Opgaver
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+[[./img/opgave_140.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/opgave_141.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+
 
 * Regning med funktioner
+#+reveal_html: <div style="font-size: 60%;">
+- Givet to funktioner $f(x)$ og $g(x)$ kan man danne nogle nye funktioner vha. de simple regneoperationer.
+
+\begin{align*}
+\text{Sumfunktionen} &: & &(f+x)(x) \\
+\text{Differensfunktionerne} &: & &(f-g)(x) \text{ og } (g-f)(x) \\
+\text{Produktfunktionen} &: & &f\cdot x(x) \\
+\text{Kvotientfunktionerne} &: & &\frac{f}{g}(x) \text{ og } \frac{g}{f}(x)
+\end{align*}
+#+attr_reveal: :frag (appear)
+- Men hvad f***** skal det betyde?
+- Giv mig nogle eksempler på funktioner, så ser vi på det sammen!
+#+reveal_html: </div>
+
+** Opgaver
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+[[./img/opgave_144_145.png]]
+#+reveal_html: </div>
+#+reveal_html: <div>
+[[./img/opgave_143.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+* Sammensatte funktioner
+#+attr_html: :width 50%
+[[./img/matryoshka.jpg]]
+** Det grundlæggende
+#+reveal_html: <div style="font-size: 50%;">
+#+attr_reveal: :frag (appear)
+- Hvis man har flere funktioner, kan man sætte dem ind i hinanden, og så har man...
+- drum roll!
+- sammensatte funktioner!
+
+#+attr_reveal: :frag (appear)
+F.eks. $$f(x)= x^2 \quad,\quad g(x)=\sin(x) \quad,\quad h(x)=10^x$$
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_reveal: :frag (appear)
+- Kan blive til
+  \begin{align*}
+  f(g(x))&= \left( \sin(x) \right)^2 \\
+  h(f(x))&= 10^{\left(x^2\right)}
+  \end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_reveal: :frag (appear)
+- mens
+  \begin{align*}
+  g(f(x))&= \sin \left(x^2  \right) \\
+  f(h(x))&= \left( 10^x \right)^2
+  \end{align*}
+#+reveal_html: </div>
+
+#+attr_reveal: :frag (appear)
+- OBS: Værdimængden for den /indre/ funktion, skal være en del af definitionsmængden for den /ydre/ funktion!
+- Følgende notationsform kan også bruges: $$f(g(x)) = f \circ g (x) \text{ og } g(f(x)) = g \circ f (x)\,.$$
+
+** Opgaver
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+[[./img/opgave_147.png]]
+
+[[./img/opgave_149_150.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/opgave_151.png]]
+
+#+attr_html: :height 300px
+[[./img/opgave_153_154.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
 * Inverse funktioner
+[[./img/inverse_funktioner.png]]
+** Aka omvendte funktioner
+#+reveal_html: <div style="font-size: 40%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+- En funktion og dennes /omvendte funktion/ *ophæver* hinanden.
+- "Sætte i anden" og "uddrage kvadratroden" er modsat hinanden.
+
+#+begin_quote
+Definition 8
+
+En /omvendt funktion/ til $f$ er en funktion $f^{-1}$, der virker modsat $f$:
+
+$$f \circ g f^{-1} (x) = x \text{ og } f^{-1} \circ f(x) = x\,.$$
+#+end_quote
+
+#+reveal_html: </div>
+[[./img/inverse_funktioner_teori.png]]
+#+reveal_html: <div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Men, men men
+#+reveal_html: <div style="font-size: 60%;">
+- Kun *injektive* funktioner har omvendte funktioner.
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+[[./img/injektiv_eller_ej_01.png]]
+
+[[./img/injektiv_eller_ej_02.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/injektiv_eller_ej_03.png]]
+
+#+begin_quote
+Sætning 1
+
+En monoton funktion har en omvendt funktion.
+#+end_quote
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Bisurin!?
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto auto;">
+#+reveal_html: <div>
+*Bijektiv*
+
+"For ethvert $y$ er der /præcis/ et $x$."
+
+[[./img/Bijection.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Surjektiv*
+
+"For ethvert $y$ er der mindst ét $x$."
+
+[[./img/Surjection.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Injektiv*
+
+"For ethvert $y$ er der højst ét $x$."
+
+[[./img/Injection.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+attr_reveal: :frag (appear)
+En *bijektiv* funktioner er *både* surjektiv og injektiv.
+#+reveal_html: </div>
+
+*** Hvad er hvad?
+#+reveal_html: <div style="font-size: 40%;">
+- En funktion $f: A \to B$ knytter til hvert element $x\in A$ et entydigt element $f(x) \in B$.
+- $A$ kaldes definitionsmængden (domænet) for $f$.
+- $B$ kaldes codomænet for $f$.
+- $f(A) = \left\{ f(x) \vert x \in A\right\}$ kaldes værdimængden af $f$.
+- $B$ kan altså være en større mængde end værdimængden $f$.
+- $A = B = [0,1]$ for alle tre viste funktioner.
+  
+[[./img/bisurin_funktioner.png]]
+#+reveal_html: </div>
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+Hvilken bijektiv, surjektiv og injektiv?
+#+reveal_html: </div>
+
+** Oda, hjælp os!
+#+attr_html: :height 500px
+[[./img/oda_omvendt.jpg]]
+
+*** "Lille spejl på væggen der..."
+#+reveal_html: <div style="font-size: 50%;">
+
+#+begin_quote
+Sætning 2
+
+Grafen for $f$ og grafen for $f^{-1}$ er hinandens spejlbilleder i linjen med ligningen $y=x$.
+#+end_quote
+#+reveal_html: </div>
+
+#+attr_html: :height 400px
+[[./img/inverse_funktioner.png]]
+
+*** Tegning før regning
+[[./img/opgave_163.png]]
+
+*** Og så til regning
+#+reveal_html: <div style="font-size: 50%;">
+#+begin_quote
+Metode til at bestemme $f^{-1}$
+
+Man finder forskriften for den omvendte funktion $f^{-1}$ til $f$, når man
+
+1. isolerer $x$ i ligningen $y=f(x)$:
+   $$y=f(x) \iff x = f^{-1}(x)$$
+2. ombytter $x$ og $y$:
+   $$x=f^{-1}(y) \leftrightarrow y = f^{-1}(x).$$
+#+end_quote
+
+#+attr_reveal: :frag (appear)
+- Prøv lige at give mig en tilfældig funktion, og så ser vi, om vi kan finde en omvendt funktion sammen.
+#+reveal_html: </div>
+
+*** Opgaver
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+[[./img/opgave_165.png]]
+
+[[./img/opgave_167.png]]
+#+reveal_html: <div style="font-size: 60%;">
+Man kan godt klare 167 i hånden.
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/opgave_170.png]]
+
+[[./img/opgave_174.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+
 * Rødder og potenser
 
 #+reveal_html: <div style="font-size: 150%;">
