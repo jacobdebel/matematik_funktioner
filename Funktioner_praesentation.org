@@ -297,8 +297,8 @@ Definition 6
 - Lokalt maksimum: $(-2\,,\,7.33)$
 - Globalt maksimum: $(6\,,\,18)$
 - Funktionens monotoniforhold:
-  - $f$ er voksende i intervallerne $-3 \leq x < -2$ og $3< x \leq 6$
-  - $f$ er aftagende  i intervallet $-2 < x < 3$
+  - $f$ er voksende i intervallerne $-3 \leq x \leq -2$ og $3\leq x \leq 6$
+  - $f$ er aftagende  i intervallet $-2 \leq x \leq 3$
 - $Vm(f) = \left\{ f \in \mathbb{R} | -13.5 \leq f \leq 18 \right\}$
 
 
