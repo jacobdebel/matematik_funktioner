@@ -421,8 +421,6 @@ Et billede siger mere end 1000 ord.
 #+reveal_html: </div>
 #+reveal_html: </div>
 
-
-
 * Regning med funktioner
 #+reveal_html: <div style="font-size: 60%;">
 - Givet to funktioner $f(x)$ og $g(x)$ kan man danne nogle nye funktioner vha. de simple regneoperationer.
@@ -522,7 +520,7 @@ $$f \circ g f^{-1} (x) = x \text{ og } f^{-1} \circ f(x) = x\,.$$
 #+reveal_html: </div>
 #+reveal_html: </div>
 
-** Men, men men
+** Men, men, men
 #+reveal_html: <div style="font-size: 60%;">
 - Kun *injektive* funktioner har omvendte funktioner.
 #+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
@@ -648,10 +646,143 @@ Man kan godt klare 167 i hånden.
 #+reveal_html: </div>
 #+reveal_html: </div>
 
-
 * Rødder og potenser
 
-#+reveal_html: <div style="font-size: 150%;">
-Et lille intermezzo.
+#+reveal_html: <div style="font-size: 60%;">
+Var der nogen, der sagde kvadratrod?
 #+reveal_html: </div>
+
+#+attr_html: :height 400px
+[[./img/kvadratrod.jpg]]
+
+** Definitioner for rødder
+#+reveal_html: <div style="font-size: 40%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+#+begin_quote
+*Definition 1*
+
+Kvadratroden af et ikke-negativt tal $a$ er det ikke-negative tal $b$, hvis andenpotens er $a$, dvs. for $a \geq 0$ gælder
+
+$$\sqrt{a} = b \iff b^2 = a\,.$$
+#+end_quote
+- Her er der krav om ikke-negative tal.
+#+begin_quote
+*Definition 2*
+
+Kubikroden af et tal $a$ er det tal, hvis tredjepotens er $a$.
+#+end_quote
+- Her er der ingen krav.
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+#+begin_quote
+*Definition 3*
+
+$a>0$: $\sqrt[n]{a}$ er det positive tal, hvis $n$​-te potens er $a$, dvs.
+
+$$\sqrt[n]{a} = b \iff a = b^n$$
+
+$a=0$:
+
+$$\sqrt[n]{a} = \sqrt[n]{0} = 0$$
+
+$a<0$: Hvis $n$ er *lige*, er $\sqrt[n]{a}$ ikke defineret. Hvis $n$ er *ulige*, er $\sqrt[n]{a}$ det negative tal, hvis $n$​-te potens er lig med $a$.
+
+Talle $n$ kaldes rodeksponenten, og $a$ kaldes radikanden (latin: radix, rod).
+#+end_quote
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Regneregler for kvadratrødder
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+*Sætning 1*
+
+For ikke-negative tal $a$ og $b$ gælder
+
+$$\sqrt{a \cdot b} = \sqrt{a}\cdot \sqrt{b} \text{ og } \sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}} \,,\quad b > 0\,.$$
+
+For alle /reelle/ tal $a$ gælder desuden
+
+$$\sqrt{a^2} = \lvert a \rvert\,.$$
+#+end_quote
+#+reveal_html: </div>
+
+*** Opgaver
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+
+#+attr_html: :height 150px
+[[./img/opgave_202.png]]
+#+attr_html: :height 150px
+[[./img/opgave_205.png]]
+#+attr_html: :height 100px
+[[./img/opgave_219.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+#+attr_html: :height 250px
+[[./img/opgave_208.png]]
+#+attr_html: :height 200px
+[[./img/opgave_214.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+** Regneregler for potenser
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+*Specielle eksponenter*
+
+\begin{align*}
+a^0 &= 1 \,,\, a \neq 0\\
+a^{-n} &= \frac{1}{a^n}\,,\, a \neq 0, n \in \mathbb{Z}\\
+a^{\frac{1}{2}} &= \sqrt{a}\,,\, a \geq 0\\
+a^{\frac{1}{n}} &= \sqrt[n]{a} \,,\, a >0 , n \text{ hel og positiv}
+\end{align*}
+*Rationel eksponent*
+
+$$a^{\frac{p}{q}} = \sqrt[q]{a^p} = \left( \sqrt[q]{a} \right)^p \\\text{for } a >0, p \text{ hel og } q \text{ hel og positiv}$$
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Regneregler for potenser*
+
+\begin{align*}
+a^p \cdot a^q &= a^{p+q} \\
+\frac{a^p}{a^q} &= a^{p-q}\,,\, a \neq 0 \\
+a^p \cdot b^p &= \left( a \cdot b \right)^p \\
+\frac{a^p}{b^p} &= \left( \frac{a}{b} \right)^{p}\,,\, b \neq 0\\
+\left( a^p \right)^q &= a^{p \cdot q} 
+\end{align*}
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Lad regn_{(ing)}en falde
+#+attr_html: :height 400px
+[[./img/regn_og_regning.jpeg]]
+
+*** Opgaver 1
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+[[./img/opgave_236.png]]
+[[./img/opgave_238.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/opgave_240.png]]
+
+[[./img/opgave_244.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+*** Opgaver 2
+[[./img/opgave_246.png]]
+[[./img/opgave_247.png]]
+
+
+
 
