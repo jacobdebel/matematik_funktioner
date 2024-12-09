@@ -783,6 +783,795 @@ a^p \cdot b^p &= \left( a \cdot b \right)^p \\
 [[./img/opgave_246.png]]
 [[./img/opgave_247.png]]
 
+* Eksponential- og logaritmefunktioner
+#+attr_html: :height 450px
+[[./img/Eksponentialfunktioner_mange.png]]
 
 
+* Klassisk eksempel
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+Din, nu afdøde, oldemor indsatte 1000 kr på din børneopsparring, den dag du blev født.
+
+Banken har givet 2 % i rente i al tid frem til nu, og der er blevet tilskrevet renter én gang om året.
+#+end_quote
+
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+- Hvor mange penge kan du hæve fra din børneopsparring nu?
+- Hvornår kan du hæve 2000 kr fra din børneopsparring, hvis du lader alle penge stå på kontoen i mellemtiden?
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/cash-piles.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+attr_reveal: :frag (appear)
+- 1. spørgsmål kan behandles med hjælp af eksponentialfunktioner.
+- 2. spørgsmål kan besvares med hjælp af logaritmefunktioner.
+#+reveal_html: </div>
+
+* Den simple eksponentialfunktion
+
+$$f(x) = b \cdot a^x$$
+
+#+reveal_html: <div style="font-size: 60%;">
+- Undersøg, hvilken betydning koefficienterne har for grafens udseende.
+- Alle hjælpemidler er tilladte.
+  - Eksempelvis, åbn geogebra og afprøv forskellige funktioner med forskellige værdier af a og b.
+  - Man kan også åbne sin matematikbog og bruge den. :)
+
+    I så tilfælde skal I se i mat A1 stx: kapitel 5 side 100 og frem.
+** Opgave
+[[./img/foerste_opgave_eksp_funktioner.png]]
+
+- Tillægsspørgsmål
+  - Hvad skal x-værdien være for at $g(x)=8192$?
+  - Hvad skal x-værdien være for at $g(x)=100$?
+
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Forrige opgave kunne nemt besvares
+
+#+attr_html: :width 400px
+[[./img/foerste_opgave_eksp_funktioner.png]]
+
+*Men* Tillægsspørgsmålene var ikke lige sådan at svare på.
+
+#+attr_reveal: :frag (appear)
+For at kunne svare på dem, skal man kende til *logaritmefunktioner*!
+
+* Logaritmefunktioner
+#+attr_html: :height 400px
+[[./img/John_Napier_of_Merchiston_1616.jpg]]
+#+reveal_html: <div style="font-size: 60%;">
+John Napier (1550-1617)
+
+Logaritmens historie: https://en.wikipedia.org/wiki/History_of_logarithms
+#+reveal_html: </div>
+
+** 10 tals-logaritmen
+
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+#+begin_quote
+*Definition 1*
+
+Den omvendte funktion til eksponentialfunktionen $f(x)=10^x$ kaldes /logaritmefunktionen med grundtal 10/, og den betegnes $g(x)=\log(x)$.
+#+end_quote
+
+#+begin_quote
+*Defininition 2*
+
+Logaritmen til et positivt tal $a$ er den eksponent $b$, som 10 skal opløftes til for at give tallet $a$:
+
+$$\log (a) = b \text{ netop når } 10^b = a\,.$$
+#+end_quote
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+- Smag lige på definitionerner sammen med jeres makker. Hvad betyder det egentlig?
+- Hvad skal man opløfte 10 i, for at få 100?
+- Hvad skal man opløfte 10 i, for at få 1000 000?
+- Hvad skal man opløfte 10 i, for at få 10?
+- Hvad skal man opløfte 10 i, for at få 1?
+- Hvad skal man opløfte 10 i, for at få 0.1?
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** 10 tals-logaritmen
+#+reveal_html: <div style="font-size: 60%;">
+- En logaritmefunktion tager generelt udgangspunkt i en eksponentialfunktion.
+- Hvis eksponentialfunktionen hedder $$f(x)= a^x$$
+- opskrives den tilsvarende logartimefunktion som $$f^{-1}(x) = \log_a \left( x \right)$$
+
+#+attr_reveal: :frag (appear)
+- For 10 tals-logaritmen ville det svare til $$f(x)=10^x \quad \text{og} \quad f^{-1} (x) = \log_{10} (x)$$
+- Hvis man bare skriver $\log(x)$ plejer vi på dansk at opfatte det som $\log_{10}(x)$.
+- Hvis man sætter en funktion sammen med sin inverse(omvendte), så skal de to funktioner /gå ud med hinanden/.
+- $f \left( f^{-1} (x) \right) = \boxed{10^{\left( \log(x) \right)}} = x  \quad \text{og} \quad f^{-1} \left( f(x) \right) = \boxed{\log \left( 10^x \right) = x}$
+#+reveal_html: </div>
+
+** Regneregler for logaritmer
+#+reveal_html: <div style="font-size: 50%;">
+#+begin_quote
+*Sætning 1*
+
+For funktionerne $\log$ og $\ln$ gælder for alle positive tal $a$ og $b$ og alle tal $x$ følgende regler:
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+1. $\log(a \cdot b) = \log (a) + \log (b)$
+2. $\log \left( \frac{a}{b} \right) = \log (a) - \log (b)$
+3. $\log \left( a^x \right) = x \cdot \log (a)$
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+1. $\ln(a \cdot b) = \ln (a) + \ln (b)$
+2. $\ln \left( \frac{a}{b} \right) = \ln (a) - \ln (b)$
+3. $\ln \left( a^x \right) = x \cdot \ln (a)$
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+end_quote
+(Hvad pokker er *ln*, tænker I nok. Hold ud. Det kommer lige om lidt. )
+
+Bonusregel:
+
+$$\log \left( \sqrt[n]{a^b} \right) = \log \left( a^{\frac{b}{n}} \right) = \frac{b}{n} \cdot \log(a)$$
+#+reveal_html: </div>
+
+** Opgave
+#+reveal_html: <div style="font-size: 60%;">
+Løs følgende opgave vha. *Team-Par-Solo*
+#+attr_html: :width 600px
+[[file:img/2022-08-03_15-53-49_screenshot.png]]
+#+reveal_html: </div>
+
+** Ligninger med logaritmer
+#+reveal_html: <div style="font-size: 60%;">
+- Kan I huske: For $g(x)=2^x$, hvilke værdier skal x have for henholdsvis at $g(x)=8192$ og $g(x)=100$?
+#+attr_reveal: :frag (appear)
+- Disse ligninger kan vi løse nu.
+- Jeg løser ligningerne på tavlen.
+#+reveal_html: </div>
+
+** Opgaver
+#+reveal_html: <div style="font-size: 60%;">
+I skal løse følgende ligninger vha. *Parsammenligning*
+
+\begin{align*}
+3 &= 10^x\\
+1.8 &= 10^{x-3}\\
+\log(x) &= 0.5 \\
+\log(3x-2) &= 2 \\
+\log(x-4) + \log(x+7) &=2 \\
+7^x &= 67.8 \\
+2.5^{x-2} &= 9
+\end{align*}
+#+reveal_html: </div>
+
+* En hel særlig eksponential- og logaritmefunktion
+\begin{align*}
+f(x) &= 2.71828182846 \dots^x \\
+f^{-1}(x) &= \ln(x)
+\end{align*}
+** $e=2.71828182846 \dots$
+#+begin_export html
+<iframe width="600" height="400" src="https://www.youtube.com/embed/AuA2EAgAegE" title="e (Euler's Number) - Numberphile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+** Bonusvideo
+#+begin_export html
+<iframe width="600" height="400" src="https://www.youtube.com/embed/uawO3-tjP1c" title="e (Extra Footage) - Numberphile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+
+** Den naturlige eksponentialfunktion
+#+reveal_html: <div style="font-size: 45%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% auto;">
+#+reveal_html: <div>
+*Særlige egenskaber*
+
+- Funktionsværdien til en vilkårlig x-værdi er lig
+- hældningen til tangenten i samme x-værdi, som igen er lig
+- integralet fra minus uendeligt til samme x-værdi
+- Den *eneste* funktion, som har disse egenskaber.
+
+
+Matematisk:
+
+\begin{align*}
+f(x) &= e^x \\
+f'(x) &= \frac{d}{dx} \left( e^x \right) = e^x \\
+F(x) &= \int e^x \,dx = e^x (+k)
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+#+attr_html: :width 50%
+[[./img/naturlig_eksp_funktion.png]]
+#+attr_html: :width 50%
+[[./img/naturlig_eksp_funktion_2.png]]
+#+attr_html: :width 50%
+[[./img/naturlig_eksp_funktion_3.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Den naturlige logaritme
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+#+begin_quote
+*Definition 3 (kapitel 3)*
+
+Den naturlige logaritme til et positivt tal $a$ er den eksponent $b$, som grundtallet $e$ skal opløftes til for at give tallet $a$:
+
+$$\ln (a) = b \text{ netop når } e^b = a\,.$$
+#+end_quote
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+#+attr_reveal: :frag (appear)
+- Vi prøver lige igen, bare med den naturlige eksponentialfunktion og logaritme.
+- Hvad skal man opløfte e i, for at få 100?
+- Hvad skal man opløfte e i, for at få 1000 000?
+- Hvad skal man opløfte e i, for at få 10?
+- Hvad skal man opløfte e i, for at få 1?
+- Hvad skal man opløfte e i, for at få 0.1?
+- Hint: På en lommeregner hedder den naturlige logaritme =ln=.
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Sammenhæng mellem $\log$ og $\ln$?
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+- Regnereglerne for $\log$ og $\ln$ er ens.
+- Er der en sammenhæng mellem de to logaritmefunktioner?
+- *Lad os undersøge det!*
+#+reveal_html: </div>
+** Sammenhæng
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+- Vi ved $$e^{\ln(x)} = x = 10^{\log(x)}$$
+- Lad os bare tage den naturlige logaritme alle steder, og se hvad der sker.
+- Det virker altså bedst at gøre sådan noget på tavlen...
+- Det endelige svar bliver $$\log(x) = \frac{\ln(x)}{\ln(10)}$$
+- Nu er det jeres tur!
+- Tag 10 tal-logaritmen på begge sider, og se, hvad der sker.
+- I får forhåbentligt $$\ln (x) = \frac{\log(x)}{\log(e)}$$
+#+reveal_html: </div>
+** Alle mulige logaritmer
+#+reveal_html: <div style="font-size: 60%;">
+- Det kan gøres mere generelt
+- Generel eksponentialfunktion og tilhørende logaritme
+  \begin{align*}
+  f(x) &= a^x \\
+  f^{-1}(x) &= \log_a (x) \\
+  f(f^{-1}(x)) &= a^{\log_a (x)} = x \\
+  f^{-1}(f(x)) &= \log_a (a^{x}) = x \\
+  \log_a(x) &= \frac{\log_{10}(x)}{\log_{10}(a)} = \frac{\ln(x)}{\ln(a)}
+  \end{align*}
+#+reveal_html: </div>
+
+** Alle mulige logaritmer
+Læg mærke til spejlingen af funktionerne omkring $y=x$.
+
+[[./img/forskellige_log.png]]
+
+** Regneregler - igen
+#+reveal_html: <div style="font-size: 30%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto auto;">
+#+reveal_html: <div>
+*Naturlig*
+\begin{align*}
+f(x) &= e^x \\
+f^{-1}(x) &= \ln(x)\\
+e^{\ln(x)} &= x \\
+\ln \left( e^x \right) &= x \\
+\ln ( a \cdot b) &= \ln(a) + \ln(b) \\
+\ln \left( \frac{a}{b} \right) &= \ln(a) - \ln(b) \\
+\ln \left( a^n \right) &= n \cdot \ln (a) \\
+\ln \left( \sqrt[m]{a^b} \right) &= \ln \left( a^{\frac{b}{m}} \right) = \frac{b}{m} \cdot \ln(a) \\
+\ln (x) &= \frac{\log(x)}{\log(e)}
+\end{align*}
+Differentiation
+\begin{align*}
+\frac{d}{dx} \left( e^x \right) &= e^{x} \\
+\frac{d}{dx} \left( \ln(x) \right) &= \frac{1}{x}
+\end{align*}
+Integration
+\begin{align*}
+\int e^x \,dx &= e^x \;(+k)\\
+\int \ln(x) \,dx &= x \cdot \ln(x) -x \; (+k)
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*10 tal*
+\begin{align*}
+f(x) &= 10^x \\
+f^{-1}(x) &= \log(x)\\
+10^{\log(x)} &= x \\
+\log \left( 10^x \right) &= x \\
+\log ( a \cdot b) &= \log(a) + \log(b) \\
+\log \left( \frac{a}{b} \right) &= \log(a) - \log(b) \\
+\log \left( a^n \right) &= n \cdot \log (a) \\
+\log \left( \sqrt[m]{a^b} \right) &= \log \left( a^{\frac{b}{m}} \right) = \frac{b}{m} \cdot \log(a) \\
+\log (x) &= \frac{\ln (x)}{\ln (10)}
+\end{align*}
+Differentiation
+\begin{align*}
+\frac{d}{dx} \left( 10^x \right) &= \ln(10) \cdot 10^{x} \\
+\frac{d}{dx} \left( \log(x) \right) &= \frac{1}{\ln(10) \cdot x}
+\end{align*}
+Integration
+\begin{align*}
+\int 10^x \,dx &= \frac{1}{\ln(10)} \cdot 10^x \\
+\int \log(x) \,dx &= \frac{x \cdot \ln(x) -x}{\ln(10)} \;(+k)
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Generelt*
+\begin{align*}
+f(x) &= n^x \\
+f^{-1}(x) &= \log_n(x)\\
+n^{\log_n(x)} &= x \\
+\log_n \left( n^x \right) &= x \\
+\log_n ( a \cdot b) &= \log_n(a) + \log_n(b) \\
+\log_n \left( \frac{a}{b} \right) &= \log_n(a) - \log_n(b) \\
+\log_n \left( a^n \right) &= n \cdot \log_n (a) \\
+\log_n \left( \sqrt[m]{a^b} \right) &= \log_n \left( a^{\frac{b}{m}} \right) = \frac{b}{m} \cdot \log_n(a) \\
+\log_n (x) &= \frac{\log(x)}{\log(n)} = \frac{\ln (x)}{\ln(n)} = \frac{\log_k(x)}{\log_k(n)}
+\end{align*}
+Differentiation
+\begin{align*}
+\frac{d}{dx} \left( n^x \right) &= \ln(n) \cdot n^{x} \\
+\frac{d}{dx} \left( \log_n(x) \right) &= \frac{1}{\ln(n) \cdot x}
+\end{align*}
+Integration
+\begin{align*}
+\int n^x \,dx &= \ln(n) \cdot n^x \;(+k) \\
+\int \log_n(x) \,dx &= \frac{x \cdot \ln(x) -x}{\ln(n)} \;(+k)
+\end{align*}
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Opgaver
+#+reveal_html: <div style="font-size: 60%;">
+Nogle af opgaverne er /simple/, mens andre blandt andet kræver omskrivning til skjulte 2.gradsligninger.
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+*Opgave 8.42*
+
+Beregn følgende værdier: $\log_4(5)$ og $\log_4(20)$.
+
+*Opgave 8.44*
+
+Løs denne ligning:
+
+$$\ln(x-1) + \log(x-1) =1$$
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Opgave 8.45 - udsnit*
+
+Løs disse ligninger:
+
+1. $\log \left( x^2 + 5\cdot x - 50 \right) =2$
+
+
+*Opgave 314 - Teknisk matematik, udsnit*
+Du skal bestemme x i følgende ligninger:
+
+1. $2^x = 5$
+2. $2^{x+2} = 5$
+3. $10^{x-1} =12$
+4. $2^{-x} + 2^x =5$
+5. $9^x - 10 \cdot 3^x - 24 =0$
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+* Logaritmiske akser
+#+reveal_html: <div style="font-size: 60%;">
+$$f(x)=3x+0.7 \quad , \quad g(x)=0.7\cdot 3^x \quad , \quad h(x)=0.7\cdot x^3$$
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto auto;">
+#+reveal_html: <div>
+[[./img/plot_alm.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/plot_logy.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/plot_logxy.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+attr_reveal: :frag (appear)
+- Hvad ser I?
+- Beskriv så meget som muligt.
+- *Parsammenligning* (Tal først i makkerpar. Bagefter sammenlignes  makkerskabsgrupper)
+- =Alt+Klik= for at zoom ind. (=Ctrl+Klik= på linux)
+#+reveal_html: </div>
+
+
+** Enkelt og dobbelt-log
+#+reveal_html: <div style="font-size: 55%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+*Enkeltlog*
+
+#+attr_html: :height 300px 
+[[./img/enkeltlog.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Dobbeltlog*
+
+#+attr_html: :height 300px 
+[[./img/dobbeltlog.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+- Inddeling i *dekader*.
+- Hver gang man går et felt op/til højre ganges der med 10.
+- Hver gang man går et felt ned/til venstre divideres der med 10.
+- Den samme relative ændring giver samme afstand, altså
+- er der samme afstand mellem 1 og 2, som mellem 8 og 16 osv.
+#+reveal_html: </div>
+
+** Håndholdt matematik - opgave
+#+reveal_html: <div style="font-size: 60%;">
+I har følgende 3 datasæt
+
+- a: (2, 9), (4, 81), (7, 2187), (10, 59049)
+- b: (2, 32.5), (5, 51.25), (7, 63.75), (10, 82.5)
+- c: (1, 1000), (4, 500), (9, 333.33), (16, 250)
+
+
+1. I skal plotte datasættene på hhv. alm. mm-papir, enkeltlogaritmisk papir og dobbeltlogaritmisk papir. *Dette skal gøres på fysisk papir i hånden.*
+   
+2. Afgør for hver af datasættene, om det repræsentere en lineær funktion, en potensfunktion eller en eksponentialfunktion.
+   
+3. Bestem forskrifter, som passer til hver af datasættene.
+   
+   (I geogebra kan man anvende =fitlinje=, =fitpot= og =fitvækst=)
+#+reveal_html: </div>
+
+** Forskrifter for eksp og pot
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+*Eksponentialfunktion*
+
+$$f(x)=b \cdot a^x$$
+
+- Man skal kende 2 punkter. (x_{1}, y_{1}) og (x_{2}, y_{2})
+
+\begin{align*}
+a &= \left( \frac{y_2}{y_1} \right)^{\frac{1}{x_2-x_1}} \\
+b &= \frac{y_1}{a^{x_1}} = \frac{y_2}{a^{x_2}}
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Potensfunktion*
+
+$$g(x) = b \cdot x^a$$
+- Man skal kende 2 punkter. (x_{1}, y_{1}) og (x_{2}, y_{2})
+- Man kan bruge alle logaritmer i formlerne (log, ln, etc)
+
+\begin{align*}
+a &= \frac{\log(y_2)-\log(y_1)}{\log(x_2) - \log(x_1)} \\
+b &= \frac{y_1}{x_1^a} = \frac{y_2}{x_2^a}
+\end{align*}
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Hvor kommer formlerne fra?
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+*Eksponentialfunktion*
+
+- Begynd med to ligninger med to ubekendte:
+
+\begin{align*}
+I:\quad y_1 &= b \cdot a^{x_1} \\
+II:\quad y_2 &= b \cdot a^{x_2} 
+\end{align*}
+
+- Løs ligningssystemet ved at isolere b i begge ligninger, sætte de to ligninger lig hinanden og endelig isoler a.
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Potensfunktion*
+
+- Begynd med to ligninger med to ubekendte:
+
+\begin{align*}
+I:\quad y_1 &= b \cdot x_1^a \\
+II:\quad y_2 &= b \cdot x_2^a 
+\end{align*}
+ 
+- Løs ligningssystemet ved at isolere b i begge ligninger, sætte de to ligninger lig hinanden og endelig isoler a.
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+attr_reveal: :frag (appear)
+- Hvilken af dem skal jeg tage mig af, og hvilken skal I selv arbejde med?
+#+reveal_html: </div>
+
+** Baggrunden for enkelt og dobbeltlog
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+1. Hvorfor bliver en eksponentialfunktion til en ret linje i et enkeltlogaritmisk koordinatsystem?
+2. Hvorfor bliver en potensfunktion til en ret linje i et dobbeltlogaritmisk koordinatsystem?
+#+end_quote
+
+
+#+reveal_html: <div style="font-size: 90%;">
+#+attr_reveal: :frag (appear)
+- Instrukser!
+- Når jeg siger buzzwordet ... for *anden* gang, må I gå igang med opgaven. Ikke før!
+- Opgave i makkerskabsgrupper.
+- Først opdeling i makkerpar.
+- Et spørgsmål til hvert makkerpar.
+- Hvert makkerpar skal finde et svar til sit spørgsmål.
+- Alle hjælpemidler er tilladte (også jeres matematikbog [[https://matbhtx.systime.dk]])
+- Efterfølgende skal makkerparrene *forklare* svarene til spørgsmålene for det andet makkerpar i makkerskabsgruppen.
+- Makkerparret med den *største samlede hårlængde* har spørgsmål 1 om det enkeltlogaritmiske koordinatsystem.
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Aflæsning i enkeltlog
+#+reveal_html: <div style="font-size: 50%;">
+- I skal bestemme forskrifterne for de 4 viste eksponentielle funktioner. I har kun graferne i det enkeltlogaritmiske koordinatsystem.
+- Aflæs passende punkter. Beregn a og b vha formlerne for bestemmelse af forskrift.
+
+#+attr_html: :width 80%
+[[./img/Ukendte_forskrifter.png][file:./img/Ukendte_forskrifter.png]]
+#+reveal_html: </div>
+
+* Sipsippernip
+#+begin_export html
+<iframe width="600" height="400" src="https://www.youtube.com/embed/Cad3IzHPTJw" title="Tungebrækker - Rim og remser for børn | Sip, Sipsippernip, Sipsippernipsipsirumsip med billeder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+#+end_export
+** Fitfitternitfitfirumfit
+#+reveal_html: <div style="font-size: 80%;">
+Fit følgende datapunkter vha hhv =fitvækst= og =fitexp= i geogebra
+
+| x |       4 |       7 |      11 |      15 |      18 |      21 |
+| y | 1147.52 | 1272.28 | 1459.97 | 1675.35 | 1857.49 | 2059.43 |
+  
+
+
+#+attr_reveal: :frag (appear)
+Hvad ser I?
+#+attr_reveal: :frag (appear)
+- =fitvækst= -> $1000\cdot 1.035^x$
+- =fitexp= -> $1000\cdot e^{0.0344 \cdot x}$
+#+reveal_html: </div>
+
+** 2 forskellige forskrifter
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+$$f(x)=b \cdot a^x$$
+
+- b: Skæring med y-aksen
+- a: Fremskrivningsfaktor
+- 0 < a < 1 : Aftagende eksp funktion
+- a > 1: Voksende eksp funktion
+- $a=1+r$, $r$ er den procentvise stigning
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+$$g(x) = b \cdot e^{k \cdot x}$$
+- b: Skæring med y-aksen
+- k: Vækstraten
+- $k<0$: Aftagende eksp funktion
+- $k>0$: Voksende eksp funktion
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+begin_quote
+*Sætning 2 (kapitel 5)*
+
+Eksponentialfunktionen med forskriften $f(x) = b \cdot a^x$ kan omskrives til følgende form:
+
+$$f(x) = b \cdot e^{k x}\,,$$
+
+hvor $k = \ln \left( a \right)$ og $a=e^k$.
+#+end_quote
+#+reveal_html: </div>
+
+** Fordobling
+#+reveal_html: <div style="font-size: 60%;">
+- Hvert makkerpar opskriver en tilfældig *voksende* eksponentialfunktion af typen $f(x)=b \cdot a^x$
+- Indtegn funktionen i et koordinatsystem (enten alm eller enkeltlog)
+- Vælg en tilfældig x-værdi og beregn/aflæs den tilhørende y-værdi.
+- Fordobl nu y-værdien, og beregn/aflæs den tilhørende x-værdi.
+- Gør det en gang til
+- og en gang til.
+- Sammenlign jeres resultater i makkerskabsgrupper.
+- *Hvilken sammenhæng mellem tallene kan I finde frem til i fællesskab?*
+#+reveal_html: </div>
+** Fordoblingskonstant
+#+reveal_html: <div style="font-size: 60%;">
+Der skulle gerne være samme afstand på x-aksen mellem hver fordobling, ligegyldigt hvor man starter henne.
+
+Kan beregnes på følgende måder:
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% 50%;">
+#+reveal_html: <div>
+For $f(x)=b\cdot a^x \quad , a>1$
+
+$$T_2 = \frac{\log(2)}{\log(a)} = \frac{\ln(2)}{\ln(a)}$$
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+For $g(x)=b\cdot e^{k\cdot x}\quad , k>0$
+
+$$T_2 = \frac{\ln(2)}{k}$$
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+attr_reveal: :frag (appear)
+- Jeg viser den ene udledning. Den anden skal I selv klare i makkerskabsgrupper.
+- *Hvilken skal jeg vise for jer?*
+#+reveal_html: </div>
+
+** Halvering
+#+reveal_html: <div style="font-size: 60%;">
+For aftagende eksponentialfunktioner er der tale om en halveringskonstant, men ellers er princippet det samme.
+
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% 50%;">
+#+reveal_html: <div>
+For $f(x)=b\cdot a^x \quad , 0< a <1​$
+
+$$T_{1/2} = \frac{\log(1/2)}{\log(a)} = \frac{\ln(1/2)}{\ln(a)}$$
+
+Eller
+$$T_{1/2} = - \frac{\log(2)}{\log(a)} = - \frac{\ln(2)}{\ln(a)}$$
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+For $g(x)=b\cdot e^{k\cdot x}\quad , k<0$
+
+$$T_{1/2} = \frac{\ln(1/2)}{k}$$
+
+Eller
+$$T_{1/2} = - \frac{\ln(2)}{k}$$
+#+reveal_html: </div>
+#+reveal_html: </div>
+Det er dog de førstnævnte formler, som er nemmest at huske.
+#+reveal_html: </div>
+
+* Bestemmelse af forskrifter
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+
+#+reveal_html: <div>
+$f(x)=b \cdot a^x$
+
+- 2 kendte punkter
+
+
+\begin{align*}
+a &= \left(\frac{y_2}{y_1}\right)^{\frac{1}{x_2-x_1}}\\
+b &= \frac{y_1}{a^{x_1}} = \frac{y_2}{a^{x_2}}
+\end{align*}
+
+- 1 kendt punkt + Fordoblings/halverings-konstant
+\begin{align*}
+a &= 2^{\frac{1}{T_2}} \text{ eller } a=\left( 1/2 \right)^{\frac{1}{T_{1/2}}}\\
+b &= \frac{y_1}{a^{x_1}} 
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+$g(x)=b \cdot e^{k\cdot x}$
+
+- 2 kendte punkter
+
+
+\begin{align*}
+k &= \frac{\ln(y_2) - \ln(y_1)}{x_2-x_1}\\
+b &= \frac{y_1}{e^{k\cdot x_1}} = \frac{y_2}{e^{k\cdot x_2}}
+\end{align*}
+
+- 1 kendt punkt + Fordoblings/halverings-konstant
+\begin{align*}
+k &= \frac{\ln(2)}{T_2} \text{ eller } k=\frac{\ln(1/2)}{T_{1/2}}\\
+b &= \frac{y_1}{e^{k\cdot x_1}} 
+\end{align*}
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+** Arbejd, arbejd
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+[[./img/algevaekst_opgave.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/tollundmanden_opgave.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Forskudt eksponentiel vækst
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 30% auto;">
+#+reveal_html: <div>
+- I har set alle eksponentialfunktioner nærme sig x-aksen.
+- Men det er muligt at forskyde en eksponentialfunktion både i x- og i y-retningen.
+
+\begin{align*}
+f(x) &= c + b \cdot a^{x-d} \\
+g(x) &= c + b \cdot e^{k \cdot \left( x-d \right)}
+\end{align*}
+- *Hvilken betydning har a, b, c, d og k?*
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+#+begin_export html
+<iframe
+width="580"
+height="400"
+src="./ggb/forskudt_eksp.html"
+title=""
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+#+end_export
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Plotteopgave
+#+begin_comment
+Forskriften er f(x)=(80-20)*0.8^x + 20
+#+end_comment
+
+#+reveal_html: <div style="font-size: 60%;">
+Plot følgende koordinater i hhv et almindeligt og et enkeltlogaritmisk koordinatsystem. *Det er en god idé at bruge et regneark til det.*
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+| x |     0 |     1 |     2 |     3 |     4 |     5 |     6 |     7 |     8 |     9 |    10 |
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+| y |    80 |    68 |  58.4 | 50.72 | 44.58 | 39.66 | 35.73 | 32.58 | 30.07 | 28.05 | 26.44 |
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+| x |    11 |    12 |    13 |    14 |    15 |    16 |    17 |    18 |    19 |    20 |       |
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+| y | 25.15 | 24.12 | 23.30 | 22.64 | 22.11 | 21.69 | 21.35 | 21.08 | 20.86 | 20.69 |       |
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+
+#+attr_reveal: :frag (appear)
+- Hvad ser I?
+- Prøv lige at trække den vandrette asymptote fra y-værdierne og plot igen.
+- Hvad ser I nu?
+- Brug jeres regneark til at bestemme en *tendenslinje* til jeres andet plot.
+- Opstil nu en forskrift, som kan beskrive jeres *oprindelige* data.
+#+reveal_html: </div>
+
+* Krusekaffe
+
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 60% auto;">
+#+reveal_html: <div>
+#+attr_html: :width 300px
+[[./Projekt_Krusekaffe.pdf][file:./img/krusekaffe.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+Download den tilhørende datafil som en csv-fil eller en excel-fil:
+- [[./Afkoeling_af_kaffe_nul_grader_udenfor.csv][Afkoeling_af_kaffe_nul_grader_udenfor.csv]]
+- [[./Afkoeling_af_kaffe_nul_grader_udenfor.xlsx][Afkoeling_af_kaffe_nul_grader_udenfor.xlsx]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
 
