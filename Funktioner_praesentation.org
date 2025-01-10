@@ -1323,7 +1323,7 @@ II:\quad y_2 &= b \cdot x_2^a
 - Først opdeling i makkerpar.
 - Et spørgsmål til hvert makkerpar.
 - Hvert makkerpar skal finde et svar til sit spørgsmål.
-- Alle hjælpemidler er tilladte (også jeres matematikbog [[https://matbhtx.systime.dk]])
+- Alle hjælpemidler er tilladte (også jeres matematikbog)
 - Efterfølgende skal makkerparrene *forklare* svarene til spørgsmålene for det andet makkerpar i makkerskabsgruppen.
 - Makkerparret med den *største samlede hårlængde* har spørgsmål 1 om det enkeltlogaritmiske koordinatsystem.
 #+reveal_html: </div>
